@@ -50,6 +50,12 @@ management:
       prometheus:
         enabled: true
 
+spring:
+  profiles: cosmosdb 
+    AZURE_COSMOSDB_URI: ${AZURE_COSMOSDB_URI}
+    AZURE_COSMOSDB_KEY: ${AZURE_COSMOSDB_KEY}
+    COSMOSDB_DATABASE_NAME: ${COSMOSDB_DATABASE_NAME}
+
 
 spring:
   profiles: key-vault
