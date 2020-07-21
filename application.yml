@@ -50,27 +50,15 @@ management:
       prometheus:
         enabled: true
 
----
-spring:
-  profiles: mysql
-  datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
-    url: jdbc:mysql://${MYSQL_SERVER_FULL_NAME}:3306/${MYSQL_DATABASE_NAME}?useSSL=false
-    username: ${MYSQL_SERVER_ADMIN_LOGIN_NAME}
-    password: ${MYSQL_SERVER_ADMIN_PASSWORD}
-    initialization-mode: ALWAYS
 
----
 spring:
   profiles: key-vault
+    AZURE_COSMOSDB_URI: ${AZURE_COSMOSDB_URI}
+    AZURE_COSMOSDB_KEY: ${AZURE_COSMOSDB_KEY}
+    COSMOSDB_DATABASE_NAME: ${COSMOSDB_DATABASE_NAME}
 
-MYSQL_SERVER_FULL_NAME: ${MYSQL-SERVER-FULL-NAME}
-MYSQL_DATABASE_NAME: ${MYSQL-DATABASE-NAME}
-MYSQL_SERVER_ADMIN_LOGIN_NAME: ${MYSQL-SERVER-ADMIN-LOGIN-NAME}
-MYSQL_SERVER_ADMIN_PASSWORD: ${MYSQL-SERVER-ADMIN-PASSWORD}
 
 azure:
   keyvault:
-    enabled: true
-    uri: ${AZURE_KEY_VAULT_URI}
+        enabled: true
+        uri: ${AZURE_KEY_VAULT_URI}
