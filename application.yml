@@ -52,7 +52,7 @@ management:
 
 ---
 spring:
-  profiles: cosmosdb 
+  profiles: cosmosdb
     AZURE_COSMOSDB_URI: ${AZURE_COSMOSDB_URI}
     AZURE_COSMOSDB_KEY: ${AZURE_COSMOSDB_KEY}
     COSMOSDB_DATABASE_NAME: ${COSMOSDB_DATABASE_NAME}
@@ -67,5 +67,5 @@ spring:
 
 azure:
   keyvault:
-        enabled: true
-        uri: ${AZURE_KEY_VAULT_URI}
+    enabled: true
+    uri: ${AZURE_KEY_VAULT_URI}
