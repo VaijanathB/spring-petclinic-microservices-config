@@ -8,10 +8,6 @@ eureka:
 ---
 spring:
   profiles: local
-  zipkin:
-    baseUrl: http://localhost:9411
-server:
-  port: 8082
 eureka:
   client:
     serviceUrl:
